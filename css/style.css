@@ -1,0 +1,84 @@
+#wrap {
+    padding-left: 0;
+}
+
+#wrap.t {
+    padding-left: 250px;
+}
+#bar-wrap {
+    z-index: 100;
+    position: fixed;
+    float: right;;
+    width: 0;
+    height: 100%;
+    background: #778899;
+    margin-left: -250px;
+    overflow-y: auto;
+}
+#map {
+    bottom:0;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    right: 0;
+}
+#page-content-wrap {
+    overflow: hidden;
+    height: 8.5em;
+    float:right;
+    width: 50%;
+    position: absolute;
+    padding: 0px;
+}
+
+.bar-nav {
+    position: absolute;
+    top: 0;
+    width: 300px;
+    margin: 0;
+    padding: 0;
+}
+
+.bar-nav li {
+    text-indent: 20px;
+    line-height: 100px;
+    font-size: 1.5em;
+}
+.input-group {
+    margin: 3em 0 5em 0;
+}
+.search-box {
+    font-size: 1.15em;
+}
+
+.placesList {
+    padding: 1em;
+    margin: 0 0 0 0;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: white;
+    list-style: none;
+    cursor: pointer;
+}
+.marker-title {
+    text-align: center;
+}
+
+@media(min-width:500px) {
+    #wrap {
+        padding-left: 250px;
+    }
+    #bar-wrap {
+        width: 300px;
+    }
+    #page-content-wrap {
+        padding: 0.5px 5px 10px 6em;
+        position: relative;
+        color: blueviolet
+    }
+
+    #wrap.toggled #page-content-wrap {
+        position: relative;
+        margin-right: 0;
+    }
+}

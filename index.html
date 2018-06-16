@@ -1,0 +1,54 @@
+41144121<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Neighboorhood Map</title>
+</head>
+
+<body>
+  <div id="map"></div>
+  <main>
+    <div id="page-content-wrap">
+          <h2>Famous Places In Delhi</h2>
+      </div> 
+      <div data-bind="visible: mapError">
+        <p>Oops. Something is wrong with Google Maps! <br>Try again later.</p>
+      </div>
+  </main>
+  <aside>
+    <div id="wrap" data-bind="css: { 't': visibleMenu }">
+      <!-- Sidebar -->
+      <div id="bar-wrap">
+        <ul class="bar-nav">
+          <li class="bar-brand">List of a place</li>
+        </ul>
+        <div class="input-group">
+          <div class="row">
+            <div class="col-md-12 col-md-offset-1 search-area" id="search-area">
+              <br>
+              <input class="search-box" type="search"placeholder="search for places" data-bind="textInput: filter">
+              <button data-bind='click: clearFilter'>Clear</button>
+              <!-- Show <li class=location-list> and filter against the results from search -->
+              <ul class="placesList" data-bind='foreach: filteredLocations'>
+                <li data-bind="text: title, click: $root.selectLocation"></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /#wrapper -->
+  </aside>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.2/knockout-min.js"></script>
+  <script src="js/map.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/locations.js"></script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCrU6BAxujGzGH2BZZ2IgD36l2mDgHVioY&callback=myMap" async defer onerror="googleError()">
+  </script>
+</body>
+</html>

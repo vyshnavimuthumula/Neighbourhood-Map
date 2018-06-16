@@ -18,7 +18,7 @@ Provide a filter option that uses an input field to filter both the list view an
 The list view and the markers update accordingly.
 Add functionality using third-party APIs to provide information when a map marker or list view entry is clicked.
 If we load the page we observerd that the icons are bounced and after seaching the place will be highlated.
-######Helpful Resources:
+######Helpful Resources:                                                                
 --https://www.youtube.com/watch?v=Zxf1mnP5zcw&t=832s                                        
 --https://www.youtube.com/watch?v=JGwRIbWWqjE                           
 --https://www.w3schools.com/graphics/google_maps_intro.asp                                                      

@@ -16,7 +16,7 @@ var  locations = [
   }, {
     title: 'Jama Masjid',
       lat: 28.6507677,lng: 77.2339893
-  }, 
+  }
 ];
 function myMap() {
   map = new google.maps.Map(document.getElementById('map'), {

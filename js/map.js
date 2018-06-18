@@ -91,8 +91,8 @@ function populateInfoWindow(marker, infowindow) {
     }).done(function(response) {
       var  articleStr = response[0];
       var  URL = 'http://en.wikipedia.org/wiki/' + articleStr;
-      infowindow.setContent('<div>' +
-        '<h2>' + marker.title + '</h1>' + '<h4>click the below link to view wikipedia page of '+ marker.title+'</h4><br></div><br><div><a href='+URL+'" target=_blank>'+marker.title+'</a></div><br>');
+      infowindow.setContent('<div class="card-show">' +
+        '<h3>' + marker.title + '</h3>' + '<h5>click the below link to view wikipedia page of '+ marker.title+'</h5><br></div><br><div><a href='+URL+'" target=_blank>'+marker.title+'</a></div><br>');
       // Open the infowindow on the correct marker.
       infowindow.open(map, marker);
     }).fail(function(jqXHR, textStatus) {

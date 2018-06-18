@@ -1,6 +1,7 @@
 var  Location = function(input) {
   this.title = input.title;
   this.location = input.location;
+  this.image = input.image;
 };
 var  ViewModel = function() {
   var  self = this;
@@ -12,7 +13,7 @@ var  ViewModel = function() {
   self.filter = ko.observable('');
   self.filteredLocations = ko.computed(function() {
     var  filterResult = self.filter().toLowerCase();
-    if (filterResult==1) {
+    if (!filterResult) {
       for (var i = 0; i < self.locationsList().length; i++) {
         if (self.locationsList()[i].marker) {
           self.locationsList()[i].marker.setVisible(true);

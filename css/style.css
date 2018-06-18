@@ -77,8 +77,32 @@
         color: blueviolet
     }
 
-    #wrap.toggled #page-content-wrap {
+    #page-content-wrap {
         position: relative;
         margin-right: 0;
     }
+    .card-show {
+        width:300px;
+        z-index:1;
+        margin:0 auto;
+    }
 }
+
+
+@media screen and (min-width:300px) and (max-width:800px) {
+    #bar-wrap {
+        width: 150px;
+    }    
+    .card-show {
+        width:200px;
+        z-index:1;
+        margin:0 auto;
+    }    
+}
+
+ @media  screen and (min-width: 750px) {
+    .card-show {
+        width:100px;
+    
+    }
+   

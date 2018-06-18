@@ -1,7 +1,6 @@
 var  Location = function(input) {
   this.title = input.title;
   this.location = input.location;
-  this.image = input.image;
 };
 var  ViewModel = function() {
   var  self = this;
